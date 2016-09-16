@@ -27,7 +27,7 @@ $(function() {
     }
 
 
-    var newPantry = new Pantry(['formaldehyde', 'arsenic', 'tiny colorful paper umbrella', 'dish water', 'wolfsbane', 'lemonade']);
+    var killerPantry = new Pantry(['formaldehyde', 'arsenic', 'tiny colorful paper umbrella', 'dish water', 'wolfsbane', 'lemonade']);
 
 
     //questions constructor
@@ -71,7 +71,7 @@ $(function() {
 
     $('#sweetno').click(function() {
         var randomIndex = Math.floor(Math.random() * (6 - 1 + (1)));
-        includedItems.push(newPantry.stock[randomIndex])
+        includedItems.push(killerPantry.stock[randomIndex])
         $(this).parent("div").hide();
         
     })
@@ -94,14 +94,14 @@ $(function() {
 
     $('#saltyno').click(function() {
         var randomIndex = Math.floor(Math.random() * (6 - 1 + (1)));
-        includedItems.push(newPantry.stock[randomIndex])
+        includedItems.push(killerPantry.stock[randomIndex])
         $(this).parent("div").hide();
         
     })
 
     $('#spicyno').click(function() {
         var randomIndex = Math.floor(Math.random() * (6 - 1 + (1)));
-        includedItems.push(newPantry.stock[randomIndex])
+        includedItems.push(killerPantry.stock[randomIndex])
         $(this).parent("div").hide();
         
     })
@@ -116,7 +116,7 @@ $(function() {
   
     $('#sourno').click(function() {
         var randomIndex = Math.floor(Math.random() * (6 - 1 + (1)));
-        includedItems.push(newPantry.stock[randomIndex])
+        includedItems.push(killerPantry.stock[randomIndex])
         $(this).parent("div").hide();
         
     })
@@ -131,7 +131,7 @@ $(function() {
 
     $('#strongno').click(function() {
         var randomIndex = Math.floor(Math.random() * (6 - 1 + (1)));
-        includedItems.push(newPantry.stock[randomIndex])
+        includedItems.push(killerPantry.stock[randomIndex])
         $(this).parent("div").hide();
         makeDrink();
     })

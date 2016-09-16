@@ -1,6 +1,11 @@
 body {
 	text-align: center;
-	
+	font-family:"Cormorant Unicase",serif;
+	background: url("../haunted.jpg");
+	  background-size:cover;
+  background-repeat:no-repeat;
+
+
 }
 
 a:link{
@@ -11,3 +16,6 @@ a:visited{
 	color: black;
 }
 
+.drinkname {
+	font-size:2em;
+}

@@ -27,7 +27,7 @@ $(function() {
     }
 
 
-    var killerPantry = new Pantry(['formaldehyde', 'arsenic', 'tiny colorful paper umbrella', 'dish water', 'wolfsbane', 'lemonade']);
+    var newPantry = new Pantry(['formaldehyde', 'arsenic', 'tiny colorful paper umbrella', 'dish water', 'wolfsbane', 'lemonade']);
 
 
     //questions constructor
@@ -66,14 +66,14 @@ $(function() {
         $(this).parent("div").hide()
         var randomIndex = Math.floor(Math.random() * (3 - 1 + (1)));
         includedItems.push(sweet.options[randomIndex]);
-        
+        console.log(includedItems);
     })
 
     $('#sweetno').click(function() {
         var randomIndex = Math.floor(Math.random() * (6 - 1 + (1)));
-        includedItems.push(killerPantry.stock[randomIndex])
+        includedItems.push(newPantry.stock[randomIndex])
         $(this).parent("div").hide();
-        
+        console.log(includedItems);
     })
 
 
@@ -81,44 +81,44 @@ $(function() {
         $(this).parent("div").hide()
         var randomIndex = Math.floor(Math.random() * (3 - 1 + (1)));
         includedItems.push(salty.options[randomIndex]);
-       
+        console.log(includedItems);
     })
 
     $('#Spicy').click(function() {
         $(this).parent("div").hide()
         var randomIndex = Math.floor(Math.random() * (3 - 1 + (1)));
         includedItems.push(spicy.options[randomIndex]);
-        
+        console.log(includedItems);
 
     })
 
     $('#saltyno').click(function() {
         var randomIndex = Math.floor(Math.random() * (6 - 1 + (1)));
-        includedItems.push(killerPantry.stock[randomIndex])
+        includedItems.push(newPantry.stock[randomIndex])
         $(this).parent("div").hide();
-        
+        console.log(includedItems);
     })
 
     $('#spicyno').click(function() {
         var randomIndex = Math.floor(Math.random() * (6 - 1 + (1)));
-        includedItems.push(killerPantry.stock[randomIndex])
+        includedItems.push(newPantry.stock[randomIndex])
         $(this).parent("div").hide();
-        
+        console.log(includedItems);
     })
 
     $('#Sour').click(function() {
         $(this).parent("div").hide()
         var randomIndex = Math.floor(Math.random() * (3 - 1 + (1)));
         includedItems.push(sour.options[randomIndex]);
-        
+        console.log(includedItems);
     })
 
   
     $('#sourno').click(function() {
         var randomIndex = Math.floor(Math.random() * (6 - 1 + (1)));
-        includedItems.push(killerPantry.stock[randomIndex])
+        includedItems.push(newPantry.stock[randomIndex])
         $(this).parent("div").hide();
-        
+        console.log(includedItems);
     })
 
     //last question, answer will trigger function
@@ -126,13 +126,15 @@ $(function() {
         $(this).parent("div").hide()
         var randomIndex = Math.floor(Math.random() * (3 - 1 + (1)));
         includedItems.push(strong.options[randomIndex]);
+        console.log(includedItems);
         makeDrink();
     })
 
     $('#strongno').click(function() {
         var randomIndex = Math.floor(Math.random() * (6 - 1 + (1)));
-        includedItems.push(killerPantry.stock[randomIndex])
+        includedItems.push(newPantry.stock[randomIndex])
         $(this).parent("div").hide();
+        console.log(includedItems);
         makeDrink();
     })
 
@@ -143,8 +145,6 @@ $(function() {
 
     //function to make the drink, including the name
     var makeDrink = function(ingredients) {
-    	$(".welcome").hide();
-    	$(".questionwrapper").remove();
         $(".serve").append("<h3> Please, enjoy your special beverage, made with:</h3>")
         for (i = 0; i < includedItems.length; i++) {
 
@@ -153,10 +153,8 @@ $(function() {
         }
 
         var randomIndex = Math.floor(Math.random() * (9 - 1 + (1)));
-        $(".serve").append("<h3 class='drinkname'>We call it The " + drinkAdjectives[randomIndex] + ' ' + drinkNouns[randomIndex] + "</h3>");
-		
+        $(".serve").append("<h3>We call it The " + drinkAdjectives[randomIndex] + ' ' + drinkNouns[randomIndex] + "</h3>");
     }
 
-   
 
 });
